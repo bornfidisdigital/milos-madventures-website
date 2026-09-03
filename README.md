@@ -24,15 +24,17 @@ To also email inquiries to `milos.madventures@gmail.com`:
 
 Do not commit `.env.local`.
 
-## Vercel preview URL
+## Live URL
+
+Canonical production site (BDS / `bornfidisdigital` on Vercel):
+
+https://milos-madventures-website-seven.vercel.app
+
+`https://milos-madventures-website.vercel.app` is an older leftover project under a different Vercel team. It does not have the videos. Do not use it.
 
 Do not point this at a custom domain until Milo has one connected.
 
-1. Push this project to its own GitHub repository (not a Bornfidis org), when you are ready.
-2. Import that repo in Vercel as a new project.
-3. Framework preset: Next.js. Build command: `npm run build`. Output: default.
-4. Optional env: `WEB3FORMS_ACCESS_KEY`, `NEXT_PUBLIC_SITE_URL` = the `*.vercel.app` URL Vercel assigns.
-5. Use the Vercel preview/production `*.vercel.app` URL until a domain is confirmed.
+Optional env: `WEB3FORMS_ACCESS_KEY`, `NEXT_PUBLIC_SITE_URL` = `https://milos-madventures-website-seven.vercel.app`.
 
 ## Pages
 

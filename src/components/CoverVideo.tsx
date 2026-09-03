@@ -35,15 +35,19 @@ export function CoverVideo({
           />
         ) : src ? (
           <video
-            className="h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full bg-teal object-contain"
             controls
             playsInline
-            preload="none"
+            preload="metadata"
             poster={poster}
+            src={src}
             aria-label={alt}
           >
-            <source src={src} type="video/mp4" />
-            Your browser cannot play this video.
+            <source src={src} type='video/mp4; codecs="avc1.42E01E,mp4a.40.2"' />
+            <a href={src} className="text-cream underline">
+              Download the clip
+            </a>{" "}
+            if it does not play here.
           </video>
         ) : (
           <p className="absolute inset-0 flex items-center justify-center px-4 text-sm text-cream/80">
