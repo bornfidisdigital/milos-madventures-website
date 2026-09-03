@@ -2,10 +2,12 @@ import Link from "next/link";
 import { CoverPhoto } from "@/components/CoverPhoto";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { experiences } from "@/data/experiences";
-import { galleryItems } from "@/data/gallery";
+import { CoverVideo } from "@/components/CoverVideo";
+import { galleryItems, galleryVideos } from "@/data/gallery";
 import { site, whatsappUrl } from "@/data/site";
 
 const previewPhotos = galleryItems.slice(0, 3);
+const featuredVideo = galleryVideos[0];
 
 export default function HomePage() {
   return (
@@ -106,6 +108,17 @@ export default function HomePage() {
           <p className="mt-3 max-w-2xl text-muted">
             Days on the water, cooking on the rocks, and the plate that follows.
           </p>
+          {featuredVideo ? (
+            <div className="mt-10 max-w-3xl">
+              <CoverVideo
+                title={featuredVideo.title}
+                alt={featuredVideo.alt}
+                src={featuredVideo.src}
+                embedUrl={featuredVideo.embedUrl}
+                poster={featuredVideo.poster}
+              />
+            </div>
+          ) : null}
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {previewPhotos.map((photo) => (
               <CoverPhoto

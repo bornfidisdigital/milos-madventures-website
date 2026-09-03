@@ -41,13 +41,20 @@ Do not point this at a custom domain until Milo has one connected.
 | `/` | Home |
 | `/experiences` | Six experience types, in three tiers |
 | `/about` | Story / positioning |
-| `/gallery` | Photo slots for Milo's images |
+| `/gallery` | Photos and riverside cooking clips |
 | `/partner` | Partner introduction (not a contract) |
 | `/plan` | Inquiry form |
+
+## Videos
+
+1. Drop a short `.mp4` in `public/videos/milos/` **or** paste a YouTube/Vimeo URL.
+2. Add an object to `galleryVideos` in `src/data/gallery.ts`.
+3. Gallery shows a Videos block; Home features the first clip.
+
+Keep self-hosted files small when you can. `riverside-cooking-fire.mp4` is the large clip (~29 MB). Longer videos work better as a YouTube or Vimeo link (`embedUrl`).
 
 ## Placeholder content still needed from Milo
 
 - Confirmed starting-from prices (currently "Custom quote")
-- Final photos listed in `src/data/gallery.ts`
 - Approved About copy in Milo's voice
 - Experience descriptions if he wants different wording

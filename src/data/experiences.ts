@@ -12,6 +12,8 @@ export type Experience = {
   /** Real photo from Milo. */
   image: string;
   imageAlt: string;
+  /** Tailwind object-position when the default center crop misses the subject. */
+  imageObjectClassName?: string;
 };
 
 export const experienceTiers = [
@@ -116,8 +118,9 @@ export const experiences: Experience[] = [
     ],
     priceLabel: "Custom quote",
     priceStatus: "placeholder",
-    image: "/images/milos/river-group.png",
-    imageAlt: "A private group sitting together in a Jamaica river",
+    image: "/images/milos/river-family.png",
+    imageAlt: "A family cooling off together in a Jamaica river",
+    imageObjectClassName: "object-cover object-[center_10%]",
   },
   {
     slug: "local-business-community",

@@ -10,6 +10,7 @@ export function ExperienceCard({ experience }: { experience: Experience }) {
         alt={experience.imageAlt}
         className="aspect-[16/10]"
         sizes="(min-width: 1024px) 33vw, 100vw"
+        objectClassName={experience.imageObjectClassName}
       />
       <div className="flex flex-1 flex-col p-6">
         <div className="flex flex-wrap items-center gap-2">
